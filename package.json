@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/sservicetk20/nodejs#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.5.3",
+    "mongoose": "^5.8.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }

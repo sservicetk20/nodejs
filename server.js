@@ -1,21 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const response = require('./network/response');
-const router = express.Router();
-
+//const router = require('./components/message/networks')
+const router = require('./network/routes');
 var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
-app.use(router);
+//app.use(router);
 
-router.get('/', function (req, res){
-    res.header({
-        "custom-header":"personalizado",
-    });
 
-    response.success(req, res, 'mensajes')
-});
+router(app);
 
 app.use('/app',express.static('public'));
 app.listen(3000);
